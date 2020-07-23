@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(220, 250, 159);
+    font-size: 12px;
+    font-family: 나눔고딕, 맑은고딕, 굴림;
+    color:rgb(1, 61, 1);
+}
+
+h1 {
+    color: firebrick;
+}

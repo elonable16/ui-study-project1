@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN 넣는 순서가 변경되면 안된다 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>mobile web_0720</title>
+</head>
+<body>
+    <!-- 페이지1 -->
+    <div data-role ="page" id="home"> <!--id를 통해서 페이지의 이름지정-->
+        <div data-role="header" data-position ="fixed"><!-- 헤더와 풋을 화면에 끝에 고정시킨다 -->
+            <!-- 헤더 부분에서 앵커 태그는 버튼으로 자동생성된다(버튼의 너비는 문자열 내용에 따른다.) -->
+            <!-- #은 링크를 의미 한다. -->
+            <a href="#page2" class="ui-btn-left">page2</a>
+            <h1>헤더 화면(HOME)</h1>
+            <a href="#page3" class="ui-btn-right">page3</a>
+            <!-- 헤더는 버튼이 왼쪽 가운데 오른쪽 3개만 가능하며 하단에 네비게이션바를 통해서 따로 만들 수는 있다 -->
+            <div data-role="navbar">
+                <!-- ol이 아닌 ul태그로 순서 없이 작성한다 -->
+                <ul>
+                    <li><a href="#">개요</a></li>
+                    <li><a href="#">봄</a></li>
+                    <li><a href="#">여름</a></li>
+                    <li><a href="#">가을</a></li>
+                    <!-- 클릭 시 색변화 -->
+                    <li><a href="#" class="ui-btn-active">겨울</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <span>컨텐츠 화면</span><br>
+            <img src="img/apeach.PNG" alt="apeach 사진">
+            <pre>
+        "어피치와 구미젤리는 옳다.""
+            </pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <!-- 푸터는 제약조건이 헤더에 비해 느슨하다, ui-bar를 통해 왼쪽 여백을 줄수 있다. -->
+        <!-- 푸터를 그룹화 하면 버튼 사이의 공백이 없어진다 horizontal, vertical -->
+        <div data-role="footer" data-position ="fixed" class="ui-bar">
+            <!-- 푸터를 그룹화 하면 버튼 사이의 공백이 없어진다 horizontal, vertical -->
+            <a href="#home">홈으로</a>
+            <span data-role="controlgroup" data-type="horizontal">
+                <a href="https://m.naver.com">NAVER</a>
+                <a href="https://m.daum.net">DAUM</a>
+            </span>
+        </div>
+    </div>
+
+
+
+    <!-- 페이지2 -->
+    <div data-role ="page" id="page2">
+        <!-- 지원하는 백버튼을 사용하여 이전 화면으로 이동, 필요시 제이커리 모바일 설정 아이콘 사용가능 -->
+        <div data-role="header" data-position ="fixed" data-add-back-btn="true" data-back-btn-text="이전">
+            <h1>헤더 화면(PAGE 2)</h1>
+            <a href="#page3" class="ui-btn-right">page3</a>
+            <div data-role="navbar">
+                <!-- ol이 아닌 ul태그로 순서 없이 작성한다 -->
+                <ul>
+                    <li><a href="#">개요</a></li>
+                    <li><a href="#">봄</a></li>
+                    <li><a href="#">여름</a></li>
+                    <li><a href="#">가을</a></li>
+                    <li><a href="#">겨울</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" style="background-color:lightblue">
+            <span>컨텐츠 화면2</span><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div data-role="footer" data-position ="fixed" class="ui-bar">
+            <a href="#home">홈으로</a>
+            <!-- 기본은 div 지만 같은 행에 넣고 싶다면 span을 쓰자! -->
+            <span data-role="controlgroup" data-type="horizontal">
+                <a href="https://m.naver.com">NAVER</a>
+                <a href="https://m.daum.net">DAUM</a>
+            </span>
+        </div>
+    </div>
+
+
+    <!-- 페이지 3 -->
+    <div data-role="page" id="page3">
+        <!-- data-fullscreen으로 헤더와 푸터를 클릭으로 숨길수 있다. -->
+        <div data-role="header"  data-position ="fixed" data-fullscreen="true" data-add-back-btn="true" data-back-btn-text="이전">
+            <h1>헤더 화면(PAGE 3)</h1>
+            <a href="#page2" class="ui-btn-right">page2</a>
+            <div data-role="navbar">
+                <!-- ol이 아닌 ul태그로 순서 없이 작성한다 -->
+                <ul>
+                    <li><a href="#">개요</a></li>
+                    <li><a href="#">봄</a></li>
+                    <li><a href="#">여름</a></li>
+                    <li><a href="#">가을</a></li>
+                    <li><a href="#">겨울</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" style="background-color: lightcyan;">
+            <span>컨텐츠 화면3</span><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div data-role="footer" data-position ="fixed" class="ui-bar">
+            <a href="#home">홈으로</a>
+            <span data-role="controlgroup" data-type="horizontal">
+                <a href="https://m.naver.com">NAVER</a>
+                <a href="https://m.daum.net">DAUM</a>
+            </span>
+        </div>
+    </div>
+</body>
+</html>

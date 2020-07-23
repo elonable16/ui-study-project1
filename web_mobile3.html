@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>web_mobile2</title>
+</head>
+<body>
+    <div data-role = "page" id = "main">
+        <div data-role = "header" data-position = "fixed">
+            <h3><b>MAKE BUTTON</b></h3>
+        </div>
+        <div data-role="content">
+            <!-- 버튼은 세가지로 만든다 1. a 2. button 3. input 화면을 키우면 자동으로 커진다 -->
+            <p style="text-align: center;">버튼 생성하기</p>
+            <a href="#" data-role="button" data-inline ="true"> a태그 버튼</a>
+            <!-- a는 링크걸때, 확인/전송과 같은 피드백을 주는 버튼은 input이나 button의 type을 쓴다.-->
+            <input type = "button" value ="입력버튼">
+            <input type = "submit" value ="전송(확인)">
+            <input type = "reset" value ="취소">
+        </div>
+        <div data-role="footer" data-position = "fixed">
+            <h3>Click Button</Button></h3>
+        </div>
+    </div>
+</body>
+</html>
